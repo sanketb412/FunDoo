@@ -1,37 +1,52 @@
 
+
 <div class="Body">
-    <div class="Form">
+    <form class="Form">
         <h2>
             Create your Account
         </h2>
         <div class="flex1">
             <div class="row-content1">
-            <!-- 1st div for Name  -->
-                <input class="input" type="text" placeholder="  First Name" id="firstName_Id">
+            <!-- 2nd div for lastName  -->  
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="Placeholder">
+                </mat-form-field>
             </div>
             <div class="row-content2">
             <!-- 2nd div for lastName  -->    
-                <input class="input" type="text" placeholder="  Last Name" id="lastName_Id">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Placeholder">
+                </mat-form-field>
             </div>
         </div>
         <div class="row-content3">
             <!-- 3st div for Name  -->
-            <input class="input_Email" type="text" placeholder="  Your Email Address" id="firstName_Id">
+            <mat-form-field appearance="outline">
+                <mat-label>Mail</mat-label>
+                <input matInput placeholder="Placeholder">
+            </mat-form-field>
         </div>
         <div class="flex2">
             <div class="row-content1">
-            <!-- 1st div for Name  -->
-                <input class="input" type="text" placeholder="  Password" id="firstName_Id">
+            <!-- 4st div for Name  -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Placeholder">
+                </mat-form-field>
             </div>
             <div class="row-content2">
-            <!-- 2nd div for lastName  -->    
-                <input class="input" type="text" placeholder="  Confirm" id="lastName_Id">
+            <!-- 5nd div for lastName  -->    
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm</mat-label>
+                    <input matInput placeholder="Placeholder">
+                </mat-form-field>
             </div>
         </div>
         <div class="modal-footer">
-            
-            <button onclick="submitNewData()" class="button">Next</button>
+            <h3 class="text"> sign in instead </h3>
+            <button onclick="submit()" class="button">Next</button>
         </div>
-    </div>
+    </form>
 </div>
-

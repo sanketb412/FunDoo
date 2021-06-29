@@ -1,6 +1,6 @@
 
 .Body {
-    background-color: #f7ebeb;
+    background-color: #f7ebeb00;
     width: auto;
     height: 100vh;
     display: flex;
@@ -12,9 +12,10 @@
     margin-top: auto;
 }
 
+
 .Form {
-    background-color: #899ccc3b;
-    min-height: 70vh;
+    background-color: #ffffff;
+    min-height: 80vh;
     width: 50%;
     border-radius: 8px;
     border: 1px solid #b9b3b3
@@ -28,7 +29,7 @@ h2 {
 
 .flex1 {
     display: flex;
-    padding: 30px 0px 30px 32px;
+    padding: 30px 0px 15px 32px;
     justify-content: stretch;
 }
 
@@ -59,6 +60,11 @@ h2 {
     border-radius: 5px;
 }
 
+.Email-Text {
+    margin: 0;
+    color: #2b2b2b8c;
+}
+
 .flex2 {
     display: flex;
     padding: 70px 0px 30px 32px;
@@ -67,16 +73,29 @@ h2 {
 
 .modal-footer {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     color: white;
     border-radius: 10px;
+    padding: 70px 0px 0px 0px;
 }
 
 .button {
-    background-color: rgb(164, 194, 218);
-    border-color: whitesmoke;
-    color: rgb(0, 0, 0);
+    background-color: #899ccc;
+    border-color: rgb(146, 146, 146);
+    color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 5px 35px;
     cursor: pointer;
+    height: 40px;
+    width: auto;
+    font-weight: 900;
+}
+
+.text {
+    display: flex;
+    color: #5e79bb;
+    padding: 0px 172px 0px 34px;
+    cursor: pointer;
+    font-weight: normal;
 }
