@@ -4,7 +4,7 @@
     width: auto;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     justify-content: space-around;
     align-items: center;
@@ -12,24 +12,34 @@
     margin-top: auto;
 }
 
+.wBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
 
 .Form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
     background-color: #ffffff;
-    min-height: 80vh;
+    min-height: 90vh;
     width: 50%;
     border-radius: 8px;
     border: 1px solid #b9b3b3
 }
 
 h2 {
-    margin: 60px 0px 30px 46px;
+    margin: 60px 0px 0px 33px;
     font-size: xx-large;
     font-weight: normal;
 }
 
 .flex1 {
     display: flex;
-    padding: 30px 0px 15px 32px;
+    padding: 30px 0px 0px 32px;
     justify-content: stretch;
 }
 
@@ -47,10 +57,10 @@ h2 {
 
 .row-content3 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 30px 0px 30px 32px;
+    padding: 10px 0px 0px 32px;
 }
 
 .input_Email {
@@ -65,6 +75,19 @@ h2 {
     color: #2b2b2b8c;
 }
 
+.placewidth{
+    width: 20px;
+}
+
+h4 {
+    margin: -16px -205px 0px 15px;
+    color: #00000091;
+}
+
+.newAccount {
+    padding: 25px 0px 0px 3px;
+    color: rgb(66, 124, 233);
+}
 .flex2 {
     display: flex;
     padding: 70px 0px 30px 32px;
@@ -77,12 +100,12 @@ h2 {
     align-items: center;
     color: white;
     border-radius: 10px;
-    padding: 70px 0px 0px 0px;
+    align-items: baseline;
+    padding: 75px 0px 0px 0px;
 }
 
 .button {
-    background-color: #899ccc;
-    border-color: rgb(146, 146, 146);
+    background-color: #4688f1;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 5px 35px;
@@ -94,8 +117,41 @@ h2 {
 
 .text {
     display: flex;
-    color: #5e79bb;
+    color: #3566b8;
     padding: 0px 172px 0px 34px;
     cursor: pointer;
     font-weight: normal;
+}
+
+.imgDiv{
+    margin-left: 38px;
+}
+.images {
+    margin: 0px;
+}
+
+img{
+    height: 250px;
+}
+
+.gText{
+    text-align: center;
+    -webkit-text-stroke: thin;
+    margin-left: -20px;
+    margin-bottom: 0px;
+}
+
+.example-h2 {
+    margin: 10px;
+}
+  
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+  
+.example-margin {
+    margin: 0 10px;
 }
