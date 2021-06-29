@@ -1,0 +1,82 @@
+
+.Body {
+    background-color: #f7ebeb;
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: auto;
+}
+
+.Form {
+    background-color: #899ccc3b;
+    min-height: 70vh;
+    width: 50%;
+    border-radius: 8px;
+    border: 1px solid #b9b3b3
+}
+
+h2 {
+    margin: 60px 0px 30px 46px;
+    font-size: xx-large;
+    font-weight: normal;
+}
+
+.flex1 {
+    display: flex;
+    padding: 30px 0px 30px 32px;
+    justify-content: stretch;
+}
+
+.input {
+    width: 180px;
+    height: 30px;
+    border: 1px solid #00000075;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.row-content2 {
+    margin-left: 20px;
+}
+
+.row-content3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px 0px 30px 32px;
+}
+
+.input_Email {
+    width: 390px;
+    height: 30px;
+    border: 1px solid #00000075;
+    border-radius: 5px;
+}
+
+.flex2 {
+    display: flex;
+    padding: 70px 0px 30px 32px;
+    justify-content: stretch;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: rgb(164, 194, 218);
+    border-color: whitesmoke;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 5px 35px;
+    cursor: pointer;
+}
