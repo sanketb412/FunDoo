@@ -6,11 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'funDo';
 }
-export class CheckboxConfigurableExample {
-  checked = false;
-  indeterminate = false;
-  labelPosition: 'before' | 'after' = 'after';
-  disabled = false;
-}
+
+
+// export class CheckboxConfigurableExample {
+//   checked = false;
+//   indeterminate = false;
+//   labelPosition: 'before' | 'after' = 'after';
+//   disabled = false;
+// }

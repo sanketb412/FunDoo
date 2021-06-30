@@ -1,8 +1,9 @@
 
 
 <div class="Body">
-    <form class="Form">
-        <div class="wBody">
+    <div class="Form">
+        <form [formGroup]="form" (ngSubmit)="submit()" class="wBody">
+            <p class="projectName">FundooNotes<p>
             <h2>
                 Create your Account
             </h2>
@@ -11,14 +12,16 @@
                 <!-- 2nd div for lastName  -->  
                     <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
-                        <input matInput placeholder="Placeholder">
+                        <input matInput placeholder="Placeholder" formControlName="firstName">
+                        <mat-error *ngIf="form.controls.firstName.errors">First Name is required !</mat-error>
                     </mat-form-field>
                 </div>
                 <div class="row-content2">
                 <!-- 2nd div for lastName  -->    
                     <mat-form-field appearance="outline">
                         <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="Placeholder">
+                        <input matInput placeholder="Placeholder" formControlName="lastName">
+                        <mat-error *ngIf="form.controls.firstName.errors">Last Name is required !</mat-error>
                     </mat-form-field>
                 </div>
             </div>
@@ -26,7 +29,8 @@
                 <!-- 3st div for Name  -->
                 <mat-form-field appearance="outline">
                     <mat-label>Username</mat-label>
-                    <input class="placewidth" matInput placeholder="Placeholder">
+                    <input class="placewidth" matInput placeholder="Placeholder" formControlName="emailId">
+                    <mat-error *ngIf="form.controls.firstName.errors">email-Id is required !</mat-error>
                 </mat-form-field>
                 <h4> You can use letters, numbers & periods</h4>
                 <div class="newAccount"> Use my Current Email Address Instead</div>
@@ -36,7 +40,8 @@
                 <!-- 4st div for Name  -->
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Placeholder">
+                        <input matInput placeholder="Placeholder" formControlName="password">
+                        <mat-error *ngIf="form.controls.firstName.errors">Password is required !</mat-error>
                     </mat-form-field>
                     <h4>Use 8 or more characters with a mix of letters, numbers & symbols</h4>
                 </div>
@@ -49,10 +54,10 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <h3 class="text"> sign in instead </h3>
-                <button onclick="submit()" class="button">Next</button>
+                <p class="text"> sign in instead </p>
+                <button type="submit" mat-raised-button color="primary" class="button">Next</button>
             </div>
-        </div>
+        </form>
         <div class="imgDiv">
             <figure class="images">
                 <img src="../../../assets/images/account.svg">
@@ -60,5 +65,5 @@
                 <h3 class="gText">Working for you</h3>
             </figure>
         </div>
-    </form>   
+    </div>   
 </div>
