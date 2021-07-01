@@ -1,18 +1,17 @@
 
-
 <div class="Body">
     <div class="Form">
         <form [formGroup]="form" (ngSubmit)="submit()" class="wBody">
             <p class="projectName">FundooNotes<p>
-            <h2>
+            <h1>
                 Create your Account
-            </h2>
+            </h1>
             <div class="flex1">
                 <div class="row-content1">
-                <!-- 2nd div for lastName  -->  
+                <!-- 1st div for lastName  -->  
                     <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="firstName">
+                        <input matInput placeholder="" formControlName="firstName">
                         <mat-error *ngIf="form.controls.firstName.errors">First Name is required !</mat-error>
                     </mat-form-field>
                 </div>
@@ -20,36 +19,35 @@
                 <!-- 2nd div for lastName  -->    
                     <mat-form-field appearance="outline">
                         <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="lastName">
-                        <mat-error *ngIf="form.controls.firstName.errors">Last Name is required !</mat-error>
+                        <input matInput placeholder="" formControlName="lastName">
+                        <mat-error *ngIf="form.controls.lastName.errors">Last Name is required !</mat-error>
                     </mat-form-field>
                 </div>
             </div>
             <div class="row-content3">
                 <!-- 3st div for Name  -->
-                <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline" class="placewidth">
                     <mat-label>Username</mat-label>
-                    <input class="placewidth" matInput placeholder="Placeholder" formControlName="emailId">
-                    <mat-error *ngIf="form.controls.firstName.errors">email-Id is required !</mat-error>
+                    <input matInput placeholder="" formControlName="emailId">
+                    <mat-error *ngIf="form.controls.emailId.errors">email-Id is required !</mat-error>
                 </mat-form-field>
                 <h4> You can use letters, numbers & periods</h4>
-                <div class="newAccount"> Use my Current Email Address Instead</div>
             </div>
             <div class="flex2">
                 <div class="row-content1">
                 <!-- 4st div for Name  -->
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Placeholder" formControlName="password">
-                        <mat-error *ngIf="form.controls.firstName.errors">Password is required !</mat-error>
+                        <input type="password" matInput placeholder="" formControlName="password">
+                        <mat-error *ngIf="form.controls.password.errors">Password is required !</mat-error>
                     </mat-form-field>
                     <h4>Use 8 or more characters with a mix of letters, numbers & symbols</h4>
                 </div>
                 <div class="row-content2">
                 <!-- 5nd div for lastName  -->    
                     <mat-form-field appearance="outline">
-                        <mat-label>Confirm</mat-label>
-                        <input matInput placeholder="Placeholder">
+                        <mat-label>Confirm Password</mat-label>
+                        <input type="password" matInput placeholder="">
                     </mat-form-field>
                 </div>
             </div>

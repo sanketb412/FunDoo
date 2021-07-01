@@ -12,13 +12,6 @@
     margin-top: auto;
 }
 
-.wBody {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
 .Form {
     display: flex;
     flex-direction: row;
@@ -32,6 +25,13 @@
     border: 1px solid #b9b3b3
 }
 
+.wBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
 .projectName{
     margin: 60px 0px 0px 33px;
     font-size: xx-large;
@@ -40,6 +40,12 @@
 }
 
 h2 {
+    margin: 15px 0px 0px 33px;
+    font-size: xx-large;
+    font-weight: normal;
+}
+
+h1 {
     margin: 15px 0px 0px 33px;
     font-size: xx-large;
     font-weight: normal;
@@ -84,7 +90,7 @@ h2 {
 }
 
 .placewidth{
-    width: 80px;
+    width: 424px;
 }
 
 h4 {
@@ -109,7 +115,8 @@ h4 {
     color: white;
     border-radius: 10px;
     align-items: baseline;
-    padding: 75px 0px 0px 0px;
+    padding: 40px 0px 0px 0px;
+    border-top: 0px;
 }
 
 .button {
@@ -147,19 +154,4 @@ img{
     -webkit-text-stroke: thin;
     margin-left: -20px;
     margin-bottom: 0px;
-}
-
-.example-h2 {
-    margin: 10px;
-}
-  
-.example-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: 60px;
-}
-  
-.example-margin {
-    margin: 0 10px;
 }
