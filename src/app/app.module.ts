@@ -13,7 +13,9 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LoginComponent } from './pages/login/login.component';
-import { ForgetEmailComponent } from './pages/forget_email/forget-email.component';
+import { ForgetEmailComponent } from './pages/forget-email/forget-email.component';
+// import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component';
+import { PasswordComponent } from './pages/password/password.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ForgetEmailComponent } from './pages/forget_email/forget-email.componen
     RegistrationComponent,
     LoginComponent,
     ForgetEmailComponent,
+    // ForgetPasswordComponent,
+    PasswordComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,4 +19,12 @@ export class UserServiceService {
   login = (data: any) => {
     return this.httpService.post(`${this.url}user/login`, data)
   }
+
+  forgetemail = (data: any) => {
+    return this.httpService.post(`${this.url}user/reset`, data)
+  }
+
+  password = (data: any) => {
+    return this.httpService.post(`${this.url}user/reset`, data)
+  }
 }
