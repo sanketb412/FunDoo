@@ -77,6 +77,14 @@ h1 {
     padding: 10px 0px 0px 32px;
 }
 
+.row-content4 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: -1px 0px 0px 32px;
+}
+
 .input_Email {
     width: 390px;
     height: 30px;
@@ -94,7 +102,7 @@ h1 {
 }
 
 h4 {
-    margin: -8px -205px 0px 15px;
+    margin: -8px -258px 0px 15px;
     color: #00000091;
 }
 
@@ -104,7 +112,7 @@ h4 {
 }
 .flex2 {
     display: flex;
-    padding: 70px 0px 30px 32px;
+    padding: 60px 0px 30px 32px;
     justify-content: stretch;
 }
 
@@ -120,22 +128,23 @@ h4 {
 }
 
 .button {
-    background-color: #4688f1;
+    background-color: #3566b8;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 5px 35px;
     cursor: pointer;
     height: 40px;
     width: auto;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 .text {
     display: flex;
     color: #3566b8;
-    padding: 0px 172px 0px 34px;
+    padding: 0px 194px 0px 34px;
+    height: 50px;
     cursor: pointer;
-    font-weight: normal;
+    font-weight: 20px;
 }
 
 .imgDiv{

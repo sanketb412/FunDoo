@@ -53,6 +53,12 @@
     padding: 0px 0px 0px 0px;
 }
 
+.forget{
+    margin-top: -11px;
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+}
+
 .footer{
     display: flex;
     flex-direction: row;
@@ -69,12 +75,12 @@
 }
 
 .button {
-    background-color: #4688f1;
+    background-color: #3566b8;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 5px 35px;
     cursor: pointer;
     height: 40px;
     width: auto;
-    font-weight: 900;
+    font-weight: 500;
 }

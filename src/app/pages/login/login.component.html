@@ -18,7 +18,7 @@
                     <input matInput placeholder="" formControlName="userName">
                     <mat-error *ngIf="form.controls.userName.errors">User Name is required !</mat-error>
                 </mat-form-field>
-                <h4 style="margin-top: -11px; color: rgb(105, 105, 105);" > Forget email?</h4>
+                <h4 class="forget" style="color: #3566b8;"> Forget email?</h4>
             </div>
             <div class="row-content2">
             <!-- 2nd div for password  -->    
@@ -27,7 +27,7 @@
                     <input type="password" matInput placeholder="" formControlName="password">
                     <mat-error *ngIf="form.controls.password.errors">Password is required !</mat-error>
                 </mat-form-field>
-                <h4 style="margin-top: -11px; color: rgb(105, 105, 105);" > Forget password?</h4>
+                <h4 class="forget" style="color: #3566b8;"> Forget password?</h4>
             </div>
         </div>
         <div>
@@ -35,7 +35,7 @@
         </div>
         <div class="footer">
             <div>
-                <h4 class="createText">Create Account</h4>
+                <a routerLink="/registration"><h4 class="createText">Create Account</h4></a>
             </div>
             <div>
                 <button type="submit" mat-raised-button color="primary" class="button">Next</button>

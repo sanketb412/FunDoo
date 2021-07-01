@@ -25,25 +25,29 @@ export class RegistrationComponent implements OnInit {
     return this.form.controls;
   }
 
+  // checkPasswords() {
+  //   const passwordCheck = this.form.controls.password.value;
+  //   const confirmPasswordCheck = this.form.controls.confirmPassword.value;
+  //     return passwordCheck === confirmPasswordCheck ? null : { notSame: true }     
+  // }
+
   submit() {
     console.log(this.form.valid); 
-    if (this.form.valid) {
-      let data = {
-        "firstName": this.form.controls.firstName.value,
-        "lastName": this.form.controls.lastName.value,
-        "email": this.form.controls.emailId.value,
-        "service": "advance",
-        "password": this.form.controls.password.value
+      if (this.form.valid) {
+        let data = {
+          "firstName": this.form.controls.firstName.value,
+          "lastName": this.form.controls.lastName.value,
+          "email": this.form.controls.emailId.value,
+          "service": "advance",
+          "password": this.form.controls.password.value
+        }
+        this.service.registration(data).subscribe((data) => {
+          console.log(data)
+        })
       }
-      this.service.registration(data).subscribe((data) => {
-        console.log(data)
-      })
-    }
   }
 
   ngOnInit(): void {
   }
-
-
   
 }
