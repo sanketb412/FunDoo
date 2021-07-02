@@ -22,7 +22,7 @@ export class ForgetEmailComponent implements OnInit {
       let data = {
         "email": this.form.controls.userName.value,
       }
-      this.service.forgetemail(data).subscribe((data) => {
+      this.service.email(data).subscribe((data) => {
         console.log(data)
       })
     }

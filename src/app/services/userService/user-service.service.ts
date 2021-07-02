@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpServiceService } from '../httpService/http-service.service';
 import { environment } from '../../../environments/environment';
+import { HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -20,11 +21,12 @@ export class UserServiceService {
     return this.httpService.post(`${this.url}user/login`, data)
   }
 
-  forgetemail = (data: any) => {
+  email = (data: any) => {
     return this.httpService.post(`${this.url}user/reset`, data)
   }
 
-  password = (data: any) => {
-    return this.httpService.post(`${this.url}/user/reset-password`, data)
+  password = (data: any, token: any) => {
+    return this.httpService.post(`${this.url}user/reset-password`, data, true, token)
   }
+  
 }

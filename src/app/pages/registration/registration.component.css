@@ -134,15 +134,16 @@ h4 {
     height: 40px;
     width: auto;
     font-weight: 500;
+    margin-left: 207px;
 }
 
 .text {
     display: flex;
     color: #3566b8;
-    padding: 0px 194px 0px 34px;
     height: 50px;
     cursor: pointer;
     font-weight: 20px;
+    margin-left: 30px;
 }
 
 .imgDiv{

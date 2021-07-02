@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators  } from '@angular/forms';
 import { UserServiceService } from 'src/app/services/userService/user-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-password',
@@ -9,27 +10,34 @@ import { UserServiceService } from 'src/app/services/userService/user-service.se
 })
 export class PasswordComponent implements OnInit {
 
-  constructor(private service: UserServiceService) { }
+  constructor(private service: UserServiceService, private route: ActivatedRoute) { }
 
   form = new FormGroup({
     newPassword: new FormControl('', [Validators.required, Validators.minLength(3)]),
     newConfirmPassword: new FormControl('', [Validators.required, Validators.minLength(3)]),
   })
 
-  submit() {
-    console.log(this.form); 
-    if (this.form.valid) {
-      let data = {
-        "password": this.form.controls.newPassword.value,
-      }
-      this.service.password(data).subscribe((data) => {
-        console.log(data)
-      })
-    }
-  }
-
+  token: any
 
   ngOnInit(): void {
+    console.log(this.route.snapshot.params.token)
+    this.token = this.route.snapshot.params.token;
+  }
+
+  submit() {
+    console.log(this.form); 
+    if(this.form.controls.newPassword.value == this.form.controls.newConfirmPassword.value){
+      if (this.form.valid) {
+        let data = {
+          "newPassword": this.form.controls.newPassword.value,
+        }
+        this.service.password(data, this.token).subscribe((data) => {
+          console.log(data)
+        })
+      }
+    } else {
+      alert("please Enter matching password");
+    }
   }
 
 }
