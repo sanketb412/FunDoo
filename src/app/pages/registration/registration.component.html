@@ -1,25 +1,24 @@
-
 <div class="Body">
     <div class="Form">
         <form [formGroup]="form" (ngSubmit)="submit()" class="wBody">
             <div class="projectName">
                 <h1 style="color: #34a853;">F</h1>
-                <h1 style="color: #3566b8; margin-left: 0px;">u</h1>
-                <h1 style="color: #fabb05; margin-left: 0px;">n</h1>
-                <h1 style="color: #3566b8; margin-left: 0px;">d</h1>
-                <h1 style="color: #ea4335; margin-left: 0px;">o</h1>
-                <h1 style="color: #fabb05; margin-left: 0px;">o</h1>
-                <h1 style="color: #3566b8; margin-left: 0px;">N</h1>
-                <h1 style="color: #ea4335; margin-left: 0px;">o</h1>
-                <h1 style="color: #34a853; margin-left: 0px;">t</h1>
-                <h1 style="color: #fabb05; margin-left: 0px;">e</h1>
-                <h1 style="color: #3566b8; margin-left: 0px;">s</h1>
+                <h1 style="color: #3566b8; margin-left: 0;">u</h1>
+                <h1 style="color: #fabb05; margin-left: 0;">n</h1>
+                <h1 style="color: #3566b8; margin-left: 0;">d</h1>
+                <h1 style="color: #ea4335; margin-left: 0;">o</h1>
+                <h1 style="color: #fabb05; margin-left: 0;">o</h1>
+                <h1 style="color: #3566b8; margin-left: 0;">N</h1>
+                <h1 style="color: #ea4335; margin-left: 0;">o</h1>
+                <h1 style="color: #34a853; margin-left: 0;">t</h1>
+                <h1 style="color: #fabb05; margin-left: 0;">e</h1>
+                <h1 style="color: #3566b8; margin-left: 0;">s</h1>
             </div>
             <h1>
                 Create your Account
             </h1>
             <div class="flex1">
-                <div class="row-content1">
+                <div>
                 <!-- 1st div for lastName  -->  
                     <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
@@ -43,7 +42,7 @@
                     <input matInput placeholder="" formControlName="emailId">
                     <mat-error *ngIf="form.controls.emailId.errors">email-Id is required !</mat-error>
                 </mat-form-field>
-                <h4> You can use letters, numbers & periods</h4>
+                <h4 class="hint"> You can use letters, numbers & periods</h4>
             </div>
             <div class="flex2">
                 <div class="row-content1">
@@ -53,7 +52,7 @@
                         <input type="password" matInput placeholder="" formControlName="password">
                         <mat-error *ngIf="form.controls.password.errors">Password is required !</mat-error>
                     </mat-form-field>
-                    <h4>Use 8 or more characters with a mix of letters, numbers & symbols</h4>
+                    <h4 class="hint">Use 8 or more characters with a mix of letters, numbers & symbols</h4>
                 </div>
                 <div class="row-content2">
                 <!-- 5nd div for lastName  -->    

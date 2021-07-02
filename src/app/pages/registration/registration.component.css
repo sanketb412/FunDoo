@@ -15,7 +15,7 @@
 .Form {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     background-color: #ffffff;
     box-shadow: 2px 2px 7px 0px;
@@ -35,12 +35,6 @@
 .projectName{
     display: flex;
     flex-direction: row;
-}
-
-h2 {
-    margin: 15px 0px 0px 33px;
-    font-size: xx-large;
-    font-weight: normal;
 }
 
 h1 {
@@ -75,24 +69,10 @@ h1 {
     padding: 10px 0px 0px 32px;
 }
 
-.row-content4 {
+.flex2 {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: -1px 0px 0px 32px;
-}
-
-.input_Email {
-    width: 390px;
-    height: 30px;
-    border: 1px solid #00000075;
-    border-radius: 5px;
-}
-
-.Email-Text {
-    margin: 0;
-    color: #2b2b2b8c;
+    padding: 60px 0px 30px 32px;
+    justify-content: stretch;
 }
 
 .placewidth{
@@ -102,16 +82,6 @@ h1 {
 h4 {
     margin: -8px -258px 0px 15px;
     color: #00000091;
-}
-
-.newAccount {
-    padding: 25px 0px 0px 3px;
-    color: rgb(66, 124, 233);
-}
-.flex2 {
-    display: flex;
-    padding: 60px 0px 30px 32px;
-    justify-content: stretch;
 }
 
 .modal-footer {
@@ -125,6 +95,15 @@ h4 {
     border-top: 0px;
 }
 
+.text {
+    display: flex;
+    color: #3566b8;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 20px;
+    margin-left: 30px;
+}
+
 .button {
     background-color: #3566b8;
     color: rgb(255, 255, 255);
@@ -135,15 +114,6 @@ h4 {
     width: auto;
     font-weight: 500;
     margin-left: 207px;
-}
-
-.text {
-    display: flex;
-    color: #3566b8;
-    height: 50px;
-    cursor: pointer;
-    font-weight: 20px;
-    margin-left: 30px;
 }
 
 .imgDiv{
@@ -162,4 +132,109 @@ img{
     -webkit-text-stroke: thin;
     margin-left: -20px;
     margin-bottom: 0px;
+}
+
+@media (max-width: 1199px) {
+    .Body {
+        width: auto;
+        min-width: 300px;
+    }
+
+    .Form {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-shrink: unset;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .imgDiv{
+        display: none;
+    }
+
+    .wBody {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectName{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }   
+
+}
+
+@media (max-width: 700px) {
+    h1 {
+        /* margin: 15px 0px 0px 33px; */
+        font-size: xx-large;
+        font-weight: normal;
+        width: 80%;
+    }
+
+    .hint {
+        width: 100px;
+    }
+
+    .button {
+        margin: 0px 0px 0px 10px;
+    }
+
+    .text {
+        margin: 0%;
+    }
+}
+
+@media (max-width: 920px) {
+
+    .Body {
+        width: auto;
+        min-width: 300px;
+    }
+    
+    .Form {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .flex1 {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px 0px 32px;
+    }
+
+    .row-content2 {
+        margin-left: 0;
+    }
+
+    .placewidth{
+        width: 210px;
+    }
+
+    .flex2 {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px 0px 32px;
+    }
+
+    .hint {
+        width: 270px;
+    }
+
+    .row-content3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .modal-footer {
+        display: flex;
+        flex-direction: row;
+        padding: 0%;
+        justify-content: center;
+    }
 }

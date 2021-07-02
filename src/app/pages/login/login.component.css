@@ -1,5 +1,4 @@
 
-
 .Body {
     background-color: #f7ebeb00;
     display: flex;
@@ -8,7 +7,7 @@
     align-items: center;
 }
 
-.text {
+.Form {
     min-height: 70%;
     width: 28%;
     background-color: #ffffff;
@@ -31,14 +30,14 @@
     flex-direction: row;
 }
 
-.signInText {
-    margin-bottom: 5px;
-}
-
 .head {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.signInText {
+    margin-bottom: 5px;
 }
 
 .inputBox {
@@ -49,10 +48,6 @@
 
 .inputContainer {
     width: 370px;
-}
-
-.boxHeight {
-    padding: 0px 0px 0px 0px;
 }
 
 .forget{
@@ -85,4 +80,25 @@
     height: 40px;
     width: auto;
     font-weight: 500;
+}
+
+@media (max-width: 1126px) {
+    .inputContainer {
+        width: 270px;
+    }
+
+    .funDoText {
+        margin-top: 20px;
+    }
+
+    .suggestion {
+        margin: 0px 35px 0px 35px;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
 }
