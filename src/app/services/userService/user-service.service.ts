@@ -25,6 +25,6 @@ export class UserServiceService {
   }
 
   password = (data: any) => {
-    return this.httpService.post(`${this.url}user/reset`, data)
+    return this.httpService.post(`${this.url}/user/reset-password`, data)
   }
 }

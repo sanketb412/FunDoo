@@ -12,4 +12,5 @@ export class HttpServiceService {
     console.log(data, url);
     return this.httpClient.post(url, data, isHeaderRequired && headers)
   }
+
 }

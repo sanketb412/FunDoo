@@ -2,9 +2,19 @@
 <div class="Body">
     <form [formGroup]="form" (ngSubmit)="submit()" class="text">
         <div class="funDoText">
-            <p class="fText"> 
-                FunDooNotes 
-            </p> 
+            <div class="fText"> 
+                <h1 style="color: #34a853;">F</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">u</h1>
+                <h1 style="color: #fabb05; margin-left: 0px;">n</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">d</h1>
+                <h1 style="color: #ea4335; margin-left: 0px;">o</h1>
+                <h1 style="color: #fabb05; margin-left: 0px;">o</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">N</h1>
+                <h1 style="color: #ea4335; margin-left: 0px;">o</h1>
+                <h1 style="color: #34a853; margin-left: 0px;">t</h1>
+                <h1 style="color: #fabb05; margin-left: 0px;">e</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">s</h1>                
+            </div> 
         </div>
         <div class="head">
             <h1 class="signInText"> Sign in </h1>
@@ -18,7 +28,7 @@
                     <input matInput placeholder="" formControlName="userName">
                     <mat-error *ngIf="form.controls.userName.errors">User Name is required !</mat-error>
                 </mat-form-field>
-                <a routerLink="/forget-email"><h4 class="forget" style="color: #3566b8;"> Forget email?</h4> </a>
+                <!-- <a routerLink="/forget-email"><h4 class="forget" style="color: #3566b8;"> Forget email?</h4> </a> -->
             </div>
             <div class="row-content2">
             <!-- 2nd div for password  -->    
@@ -27,7 +37,7 @@
                     <input type="password" matInput placeholder="" formControlName="password">
                     <mat-error *ngIf="form.controls.password.errors">Password is required !</mat-error>
                 </mat-form-field>
-                <a routerLink="/password"><h4 class="forget" style="color: #3566b8;"> Forget password?</h4></a>
+                <a routerLink="/forget-email"><h4 class="forget" style="color: #3566b8;"> Forget password?</h4></a>
             </div>
         </div>
         <div>

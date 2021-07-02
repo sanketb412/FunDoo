@@ -13,6 +13,7 @@ export class PasswordComponent implements OnInit {
 
   form = new FormGroup({
     newPassword: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    newConfirmPassword: new FormControl('', [Validators.required, Validators.minLength(3)]),
   })
 
   submit() {

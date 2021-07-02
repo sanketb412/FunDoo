@@ -16,7 +16,8 @@ export class RegistrationComponent implements OnInit {
     firstName: new FormControl('', [Validators.required, Validators.minLength(3)]),
     lastName: new FormControl('', [Validators.required, Validators.minLength(3)]),
     emailId: new FormControl('', [Validators.required, Validators.email, Validators.minLength(3)]),
-    password: new FormControl('', [Validators.required, Validators.minLength(3)])
+    password: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    confirmPassword: new FormControl('', [Validators.required])
   })
 
   hide: Boolean = false
@@ -25,14 +26,9 @@ export class RegistrationComponent implements OnInit {
     return this.form.controls;
   }
 
-  // checkPasswords() {
-  //   const passwordCheck = this.form.controls.password.value;
-  //   const confirmPasswordCheck = this.form.controls.confirmPassword.value;
-  //     return passwordCheck === confirmPasswordCheck ? null : { notSame: true }     
-  // }
-
   submit() {
     console.log(this.form.valid); 
+    if(this.form.controls.password.value == this.form.controls.confirmPassword.value){
       if (this.form.valid) {
         let data = {
           "firstName": this.form.controls.firstName.value,
@@ -45,6 +41,8 @@ export class RegistrationComponent implements OnInit {
           console.log(data)
         })
       }
+    }
+    else(alert("please Enter matching password"))
   }
 
   ngOnInit(): void {

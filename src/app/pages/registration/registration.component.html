@@ -2,7 +2,19 @@
 <div class="Body">
     <div class="Form">
         <form [formGroup]="form" (ngSubmit)="submit()" class="wBody">
-            <p class="projectName">FundooNotes<p>
+            <div class="projectName">
+                <h1 style="color: #34a853;">F</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">u</h1>
+                <h1 style="color: #fabb05; margin-left: 0px;">n</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">d</h1>
+                <h1 style="color: #ea4335; margin-left: 0px;">o</h1>
+                <h1 style="color: #fabb05; margin-left: 0px;">o</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">N</h1>
+                <h1 style="color: #ea4335; margin-left: 0px;">o</h1>
+                <h1 style="color: #34a853; margin-left: 0px;">t</h1>
+                <h1 style="color: #fabb05; margin-left: 0px;">e</h1>
+                <h1 style="color: #3566b8; margin-left: 0px;">s</h1>
+            </div>
             <h1>
                 Create your Account
             </h1>
@@ -47,7 +59,8 @@
                 <!-- 5nd div for lastName  -->    
                     <mat-form-field appearance="outline">
                         <mat-label>Confirm Password</mat-label>
-                        <input type="password" matInput placeholder="">
+                        <input type="password" matInput placeholder="" formControlName="confirmPassword">
+                        <mat-error *ngIf="form.controls.confirmPassword.errors">Password is required !</mat-error>
                     </mat-form-field>
                 </div>
             </div>
