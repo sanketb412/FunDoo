@@ -10,12 +10,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { DropdownModule } from 'angular-bootstrap-md';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
+
 import { LoginComponent } from './pages/login/login.component';
 import { ForgetEmailComponent } from './pages/forget-email/forget-email.component';
 // import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component';
 import { PasswordComponent } from './pages/password/password.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +33,7 @@ import { PasswordComponent } from './pages/password/password.component';
     ForgetEmailComponent,
     // ForgetPasswordComponent,
     PasswordComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,13 @@ import { PasswordComponent } from './pages/password/password.component';
     FormsModule, 
     ReactiveFormsModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatIconModule,
+    // MDBBootstrapModule.forRoot(),
+    // DropdownModule.forRoot(),
+    MatSidenavModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,89 @@
+
+<!-- <h1 style="background-color: blue; padding: 8px;"> hello world</h1> -->
+
+<div style="height: 100vh;">
+    <div style="border-bottom: 1px solid #bfbebe; height: 8vh;">
+        <div class="header">
+            <div class="head-left">
+                <div style="width: 30%; background-color: rgb(255, 255, 255); padding: 12px 0px 12px 10px;">           
+                    <button type="button" mat-button (click)="drawer.toggle()" mat-mini-fab color="primary" style="margin-top: -7px; background-color: rgb(255, 255, 255); color: black;" aria-label="Example icon button with a menu icon">
+                        <mat-icon>menu</mat-icon>
+                    </button>                   
+                </div>
+                <div style="width: 30%; background-color: rgb(255, 255, 255); margin-right: -40px; margin-left: -35px;">
+                    <img src="../../../assets/images/keep_logo.png">
+                </div>
+                <div style="width: 20%; background-color: rgb(255, 255, 255); padding: 15px 0px 12px 0px; font-size: x-large; color:rgb(124, 124, 124)">
+                    FundooNotes
+                </div>
+            </div>
+            <div class="head-center" >
+                <form class="search">
+                    <button class="material-icons" aria-label="Search">search</button>         
+                    <div>
+                        <input class="searchInput" aria-label="Search" type="text">
+                    </div>
+                </form>
+            </div>
+            <div class="head-right"> 
+                <div class="example-button-container">
+                    <button mat-mini-fab color="white" aria-label="Example icon button with a home icon" type="button">
+                        <mat-icon mat-button [matMenuTriggerFor]="belowMenu" >person</mat-icon>
+                        <mat-menu class="user-box" #belowMenu="matMenu" yPosition="below">
+                            <div style="width: 90%;">
+                                User Name
+                            </div>
+                            <button mat-menu-item>Item 2</button>
+                        </mat-menu>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <div class="sidebar__notes sidebar__notes-notes" style="margin-bottom: 20px;">
+                <button>
+                  <img class="imgDimension"
+                    src="https://static.thenounproject.com/png/10329-200.png"
+                    alt="note-icon"/>
+                </button>
+                <button style="width: 35px; height: 35px;">Notes</button>
+            </div>
+            <div class="sidebar__notes sidebar__notes-bell" style="margin-bottom: 20px;">
+                <button>
+                  <img class="imgDimension"
+                    src="https://cdn.iconscout.com/icon/free/png-256/bell-479-458061.png"
+                    alt="bell-icon"/>
+                </button>
+                <button>Remainders</button>
+            </div>
+            <div class="sidebar__notes sidebar__notes-edit" style="margin-bottom: 20px;">
+                <button>
+                  <img style="width: 28px;"
+                    src="https://cdn2.iconfinder.com/data/icons/education-2-45/48/71-512.png "
+                    alt="note-icon"/>
+                </button>
+                <button>.  Edit Labels</button>
+            </div>
+            <div class="sidebar__notes sidebar__notes-archieve" style="margin-bottom: 20px;">
+                <button>
+                  <img class="imgDimension"
+                    src="https://cdn.iconscout.com/icon/free/png-256/archive-rar-extract-zip-file-data-diocument-secure-31759.png"
+                    alt="note-icon"
+                  />
+                </button>
+                <button>Archieve</button>
+            </div>
+            <div class="sidebar__notes sidebar__notes-delete" style="margin-bottom: 20px;">
+                <button>
+                  <img class="imgDimension"
+                    src="https://www.svgrepo.com/show/21045/delete-button.svg"
+                    alt="note-icon"
+                  />
+                </button>
+                <button>Trash</button>
+            </div>
+        </mat-drawer>  
+    </mat-drawer-container> 
+</div>

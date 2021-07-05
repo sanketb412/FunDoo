@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       }
       this.service.login(data).subscribe((data) => {
         console.log(data)
-      })
+      });
     }
   }
   

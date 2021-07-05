@@ -22,7 +22,7 @@ export class UserServiceService {
   }
 
   email = (data: any) => {
-    return this.httpService.post(`${this.url}user/reset`, data)
+    return this.httpService.post(`${this.url}user/reset`, data);
   }
 
   password = (data: any, token: any) => {
