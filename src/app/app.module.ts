@@ -24,6 +24,9 @@ import { ForgetEmailComponent } from './pages/forget-email/forget-email.componen
 // import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { NotesComponent } from './components/notes/notes.component';
+import { CreatenoteComponent } from './components/createnote/createnote.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     // ForgetPasswordComponent,
     PasswordComponent,
     DashboardComponent,
+    NotesComponent,
+    CreatenoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     // MDBBootstrapModule.forRoot(),
     // DropdownModule.forRoot(),
     MatSidenavModule,
-    MatMenuModule
+    MatMenuModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
