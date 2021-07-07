@@ -2,11 +2,11 @@
 <mat-accordion>
     <mat-expansion-panel hideToggle >
         <mat-expansion-panel-header>
-            <form (ngSubmit)="submit()" id="my-form"> 
+            <form [formGroup]="form" (ngSubmit)="submit()" id="my-form"> 
                 <div style="width: 600px;">
                     <div style="display: flex; align-items: flex-end; justify-content: space-between;">
                         <div>
-                            <input class="searchInput" aria-label="Search" type="text" placeholder="Title" formControlName="title">
+                            <input class="searchInput" type="text" placeholder="Title" formControlName="titleText">
                         </div>
                         <div>
                             <mat-icon>check_box</mat-icon>
@@ -21,12 +21,14 @@
                 </div>
             </form>
         </mat-expansion-panel-header>
-        <div style="height: 70px;">
-            <input class="searchInput" aria-label="Search" type="text" placeholder="Take a Notes.." formControlName="notes">
-        </div>
-        <div style="display: flex; justify-content: space-between;" >
-            <app-icon style="width: 60%;"></app-icon>
-            <button mat-button type="submit" form="my-form">Close</button>
-        </div>
+        <form [formGroup]="form">
+            <div style="height: 70px;">
+                <input class="searchInput" type="text" placeholder="Take a Notes.." formControlName="notesText">
+            </div>
+            <div style="display: flex; justify-content: space-between;" >
+                <app-icon style="width: 60%;"></app-icon>
+                <button mat-button type="submit" form="my-form">Close</button>
+            </div>
+        </form>
     </mat-expansion-panel>
 </mat-accordion>
