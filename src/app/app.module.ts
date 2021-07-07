@@ -27,6 +27,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { CreatenoteComponent } from './components/createnote/createnote.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { DisplaynoteComponent } from './components/displaynote/displaynote.component';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     DashboardComponent,
     NotesComponent,
     CreatenoteComponent,
+    DisplaynoteComponent,
+    IconComponent,
   ],
   imports: [
     BrowserModule,

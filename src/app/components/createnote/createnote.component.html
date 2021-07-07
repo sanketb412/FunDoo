@@ -1,37 +1,32 @@
 
 <mat-accordion>
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel hideToggle >
         <mat-expansion-panel-header>
-            <div style="width: 600px;">
-                <div style="display: flex; align-items: flex-end; justify-content: space-between;">
-                    <div>
-                        <input class="searchInput" aria-label="Search" type="text" placeholder="Title">
-                    </div>
-                    <div>
-                        <mat-icon>check_box</mat-icon>
-                    </div>
-                    <div>
-                        <mat-icon>brush</mat-icon>
-                    </div>
-                    <div>
-                        <mat-icon> insert_photo</mat-icon>
+            <form (ngSubmit)="submit()" id="my-form"> 
+                <div style="width: 600px;">
+                    <div style="display: flex; align-items: flex-end; justify-content: space-between;">
+                        <div>
+                            <input class="searchInput" aria-label="Search" type="text" placeholder="Title" formControlName="title">
+                        </div>
+                        <div>
+                            <mat-icon>check_box</mat-icon>
+                        </div>
+                        <div>
+                            <mat-icon>brush</mat-icon>
+                        </div>
+                        <div>
+                            <mat-icon> insert_photo</mat-icon>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </mat-expansion-panel-header>
         <div style="height: 70px;">
-            <input class="searchInput" aria-label="Search" type="text" placeholder="Take a Notes..">
+            <input class="searchInput" aria-label="Search" type="text" placeholder="Take a Notes.." formControlName="notes">
         </div>
-        <div style="display: flex; justify-content: space-around; align-items: center;">
-            <mat-icon>add_alert</mat-icon>
-            <mat-icon>perm_identity</mat-icon>
-            <mat-icon>color_lens</mat-icon>
-            <mat-icon> insert_photo</mat-icon>
-            <mat-icon>archive</mat-icon>
-            <mat-icon>more_vert</mat-icon>
-            <mat-icon>undo</mat-icon>
-            <mat-icon>redo</mat-icon>
-            <button mat-button>Close</button>
-        </div>    
+        <div style="display: flex; justify-content: space-between;" >
+            <app-icon style="width: 60%;"></app-icon>
+            <button mat-button type="submit" form="my-form">Close</button>
+        </div>
     </mat-expansion-panel>
 </mat-accordion>

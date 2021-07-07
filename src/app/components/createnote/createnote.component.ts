@@ -12,4 +12,10 @@ export class CreatenoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit=() => {
+    let userData = new FormData()
+    // userData.append("title", )
+    // userData.append("description",)
+    console.log("NoteCreated")
+  }
 }
