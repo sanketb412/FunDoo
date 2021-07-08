@@ -16,4 +16,7 @@ export class NoteServiceService {
     return this.httpService.post(`${this.url}notes/addNotes`, userData, true, token)
   }
 
+  displaynote = (userData: any, token: any) => {
+    // return this.httpService.GET(`${this.url}notes/getNotesList`, userData, true, token)
+  }
 }

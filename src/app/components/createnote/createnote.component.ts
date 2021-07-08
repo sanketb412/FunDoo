@@ -19,16 +19,12 @@ export class CreatenoteComponent implements OnInit {
     notesText: new FormControl('')
   })
 
-  // tokenId: any
-
   tokenId = localStorage.getItem("token");
 
   submit=() => {
     let userData = {
       "title": this.form.controls.titleText.value,
       "description": this.form.controls.notesText.value
-      // userData.append("title", this.form.controls.title.value)
-      // userData.append("description",)
     } 
     this.service.createnote(userData, this.tokenId).subscribe((userData) => {
       console.log(userData)
