@@ -13,4 +13,5 @@ export class DisplaynoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
