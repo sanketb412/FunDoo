@@ -8,23 +8,20 @@ import { NoteServiceService } from 'src/app/services/noteService/note-service.se
 })
 export class NotesComponent implements OnInit {
 
-  note = []; 
+  notes = []; 
   
   constructor(private service: NoteServiceService) { }
 
   tokenId = localStorage.getItem("token");
 
-  
-
   ngOnInit(): void {
     this.getData()
   }
 
-
   getData() {
     this.service.note(this.tokenId).subscribe((data:any) => {
       console.log(data)
-      this.note=data['data'].data
+      this.notes=data['data'].data
     })
   }
   

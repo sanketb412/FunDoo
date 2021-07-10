@@ -7,15 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DisplaynoteComponent implements OnInit {
 
+  @Input() notes: any;
+
   constructor() { }
 
-  // @Input() message: Array;
-
-  @Input() titleData = Array;
-
-  @Input() descriptionData = Array;
-
   ngOnInit(): void {
+    console.log(this.notes);
   }
-  
+
 }
