@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteServiceService } from 'src/app/services/noteService/note-service.service';
-import { CreatenoteComponent } from '../createnote/createnote.component';
 
 @Component({
   selector: 'app-notes',
@@ -9,11 +8,13 @@ import { CreatenoteComponent } from '../createnote/createnote.component';
 })
 export class NotesComponent implements OnInit {
 
+  note = []; 
+  
   constructor(private service: NoteServiceService) { }
 
   tokenId = localStorage.getItem("token");
 
-  note = []; 
+  
 
   ngOnInit(): void {
     this.getData()
@@ -22,6 +23,7 @@ export class NotesComponent implements OnInit {
 
   getData() {
     this.service.note(this.tokenId).subscribe((data:any) => {
+      console.log(data)
       this.note=data['data'].data
     })
   }

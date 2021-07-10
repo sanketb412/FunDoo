@@ -30,4 +30,6 @@ export class CreatenoteComponent implements OnInit {
       console.log(userData)
     });
   }
+
+  
 }

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { NoteServiceService } from 'src/app/services/noteService/note-service.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-displaynote',
@@ -8,10 +7,15 @@ import { NoteServiceService } from 'src/app/services/noteService/note-service.se
 })
 export class DisplaynoteComponent implements OnInit {
 
-  constructor(private service: NoteServiceService) { }
+  constructor() { }
+
+  // @Input() message: Array;
+
+  @Input() titleData = Array;
+
+  @Input() descriptionData = Array;
 
   ngOnInit(): void {
   }
-
   
 }
