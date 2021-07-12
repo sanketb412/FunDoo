@@ -8,7 +8,7 @@ import { NoteServiceService } from 'src/app/services/noteService/note-service.se
 })
 export class NotesComponent implements OnInit {
 
-  notes = []; 
+  notes = [].reverse; 
   
   constructor(private service: NoteServiceService) { }
 
@@ -16,12 +16,12 @@ export class NotesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getData();
-    // this.service.getRefreshedData().subscribe(() => this.getData());
+    this.service.getRefreshedData().subscribe(() => this.getData());
   }
 
   getData() {
     this.service.note(this.tokenId).subscribe((data:any) => {
-      this.notes=data['data'].data
+      this.notes=data['data'].data.reverse()
     })
   }
   
