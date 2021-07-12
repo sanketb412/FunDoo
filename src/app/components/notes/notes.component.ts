@@ -8,7 +8,7 @@ import { NoteServiceService } from 'src/app/services/noteService/note-service.se
 })
 export class NotesComponent implements OnInit {
 
-  notes = [].reverse; 
+  notes = []; 
   
   constructor(private service: NoteServiceService) { }
 

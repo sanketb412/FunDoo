@@ -1,7 +1,7 @@
 <!-- <p>displaynote works!</p> -->
 <div class="displayBox">
     <ng-container  *ngFor="let note of notes">
-        <div (mouseover)="changeText=true" (mouseout)="changeText=false" class="noteBlock" style="height: 10%;">
+        <div (click)="openAddDialog()" (mouseover)="changeText=true" (mouseout)="changeText=false" class="noteBlock">
                 <div class="title">
                     <h2>{{ note.title }}</h2>
                 </div>

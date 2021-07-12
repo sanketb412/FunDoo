@@ -29,7 +29,8 @@ import { CreatenoteComponent } from './components/createnote/createnote.componen
 import {MatExpansionModule} from '@angular/material/expansion';
 import { DisplaynoteComponent } from './components/displaynote/displaynote.component';
 import { IconComponent } from './components/icon/icon.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     CreatenoteComponent,
     DisplaynoteComponent,
     IconComponent,
+    UpdatenoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +67,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UpdatenoteComponent]
 })
 export class AppModule { }
 
