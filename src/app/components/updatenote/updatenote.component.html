@@ -1,14 +1,21 @@
 
-<!-- <h1 mat-dialog-title>Add file</h1>
-<mat-dialog-content>
-  Content goes here
+<form [formGroup]="form" (ngSubmit)="submit(form)">
+<div class="description">
+<mat-dialog-content class="dialogContent">
+    <mat-form-field>
+        <input matInput formControlTitle="title">
+      </mat-form-field>
+  </mat-dialog-content>
+<mat-dialog-content class="dialogContent">
+    <mat-form-field>
+        <input matInput formControlDescription="description">
+      </mat-form-field>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button>Add</button>
-  <button mat-button>Cancel</button>
-</mat-dialog-actions> -->
-
-
-<app-createnote></app-createnote>
+<mat-dialog-actions class="iconButton">
+    <app-icon></app-icon>
+    <button mat-button type="submit" mat-dialog-close>close</button>
+</mat-dialog-actions>
+</div>
+</form>
 
 

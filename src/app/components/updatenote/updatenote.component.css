@@ -1,0 +1,11 @@
+.description {
+    width: 600px;
+}
+
+.dialogContent {
+    height: 6vh;
+}
+
+.iconButton {
+    justify-content: space-between;
+}

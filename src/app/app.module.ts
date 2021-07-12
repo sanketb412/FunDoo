@@ -14,14 +14,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-// import { MDBBootstrapModule } from 'angular-bootstrap-md';
-// import { DropdownModule } from 'angular-bootstrap-md';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 
 import { LoginComponent } from './pages/login/login.component';
 import { ForgetEmailComponent } from './pages/forget-email/forget-email.component';
-// import { ForgetPasswordComponent } from './pages/forget-password/forget-password.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotesComponent } from './components/notes/notes.component';
@@ -45,7 +42,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     CreatenoteComponent,
     DisplaynoteComponent,
     IconComponent,
-    UpdatenoteComponent,
+    UpdatenoteComponent
   ],
   imports: [
     BrowserModule,
