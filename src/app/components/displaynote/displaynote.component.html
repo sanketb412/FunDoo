@@ -1,16 +1,18 @@
 <!-- <p>displaynote works!</p> -->
 <div class="displayBox">
     <ng-container  *ngFor="let note of notes">
-        <div class="noteBlock" style="height: 20%;">
-            <div class="title">
-                <h2>{{ note.title }}</h2>
-            </div>
-            <div class="description">
-                <h3>{{ note.description }}</h3>
-            </div>
-            <div class="icon">
+        <div (mouseover)="changeText=true" (mouseout)="changeText=false" class="noteBlock" style="height: 10%;">
+                <div class="title">
+                    <h2>{{ note.title }}</h2>
+                </div>
+                <div class="description">
+                    <h3>{{ note.description }}</h3>
+                </div>
+            <div class="icon" *ngIf="changeText" >
                 <app-icon></app-icon>
-            </div>
+            </div>   
         </div>
     </ng-container>
 </div>
+
+<!-- style="position: relative; top:10px;" -->

@@ -29,6 +29,7 @@ import { CreatenoteComponent } from './components/createnote/createnote.componen
 import {MatExpansionModule} from '@angular/material/expansion';
 import { DisplaynoteComponent } from './components/displaynote/displaynote.component';
 import { IconComponent } from './components/icon/icon.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { IconComponent } from './components/icon/icon.component';
     // DropdownModule.forRoot(),
     MatSidenavModule,
     MatMenuModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

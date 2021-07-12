@@ -9,7 +9,10 @@ export class DisplaynoteComponent implements OnInit {
 
   @Input() notes: any;
 
-  constructor() { }
+  changeText: boolean;
+  constructor() { 
+    this.changeText = false;
+  }
 
   ngOnInit(): void {
     console.log(this.notes);

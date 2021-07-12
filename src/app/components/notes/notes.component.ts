@@ -15,12 +15,12 @@ export class NotesComponent implements OnInit {
   tokenId = localStorage.getItem("token");
 
   ngOnInit(): void {
-    this.getData()
+    this.getData();
+    // this.service.getRefreshedData().subscribe(() => this.getData());
   }
 
   getData() {
     this.service.note(this.tokenId).subscribe((data:any) => {
-      console.log(data)
       this.notes=data['data'].data
     })
   }
