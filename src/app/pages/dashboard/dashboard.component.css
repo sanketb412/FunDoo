@@ -111,13 +111,13 @@ button {
 }
 
 .user-box{
-    width: 158px;
+    width: 200px !important;
     height: 158px;
     display: flex;
 }
 
 ::ng-deep .mat-menu-panel {
-    min-width: 300px !important;
+    min-width: 40px !important;
     min-height: 400px !important;
 }
 

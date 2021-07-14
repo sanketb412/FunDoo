@@ -7,7 +7,6 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -29,7 +28,8 @@ import { IconComponent } from './components/icon/icon.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { ColorComponent } from './components/color/color.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+// import { ColorPickerModule } from '@syncfusion/ej2-angular-inputs';
 
 @NgModule({
   declarations: [
@@ -62,7 +62,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatMenuModule,
     MatExpansionModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    // ColorPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

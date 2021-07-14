@@ -1,7 +1,7 @@
 
 .noteBlock {
     display: flex;
-    width: 230px;
+    width: 235px;
     display: block;
     block-size: 20px;
     background-color: rgb(255, 255, 255);
@@ -10,6 +10,7 @@
     box-shadow: 0px 0px 5px 1px rgb(146, 146, 146);
     height: 10%;
     border-radius: 10px;
+    
 }
 
 .title {
@@ -34,4 +35,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }

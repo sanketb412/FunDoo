@@ -12,4 +12,7 @@ export class ColorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  colorChange() {
+    console.log("theme")
+  }
 }

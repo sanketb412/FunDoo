@@ -1,0 +1,15 @@
+.body {
+    background-color: #ffff;
+    height: 107px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.circle {
+    border-radius: 50px/50px;
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+}
