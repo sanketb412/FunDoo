@@ -1,16 +1,18 @@
 <!-- <p>displaynote works!</p> -->
 <div class="displayBox">
     <ng-container  *ngFor="let note of notes">
-        <div (click)="openAddDialog(note)"  class="noteBlock">
-            <div class="title">
-                <h2>{{ note.title }}</h2>
-            </div>
-            <div class="description">
-                <h3>{{ note.description }}</h3>
+        <div class="noteBlock">
+            <div (click)="openAddDialog(note)"  >
+                <div class="title">
+                    <h2>{{ note.title }}</h2>
+                </div>
+                <div class="description">
+                    <h3>{{ note.description }}</h3>
+                </div>  
             </div>
             <div class="icon" >
                 <app-icon></app-icon>
-            </div>   
+            </div> 
         </div>
     </ng-container>
 </div>

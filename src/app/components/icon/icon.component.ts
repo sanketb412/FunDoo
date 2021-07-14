@@ -12,4 +12,10 @@ export class IconComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  display = false;
+  
+  onPress(){
+    this.display = true;
+  }
+
 }
