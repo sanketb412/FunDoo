@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef} from '@angular/material/dialog';
+import { FormGroup } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { NoteServiceService } from 'src/app/services/noteService/note-service.service';
 
 @Component({
   selector: 'app-updatenote',
@@ -11,15 +13,27 @@ export class UpdatenoteComponent implements OnInit {
 
   form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private dialogRef: MatDialogRef< UpdatenoteComponent>) { }
+  title: any;
+  description: any;
 
-  ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      title: ''
-    })
+  constructor(private dialogRef: MatDialogRef< UpdatenoteComponent>, @Inject(MAT_DIALOG_DATA) public data: any, private noteService: NoteServiceService) {
+    this.title = data.note.title,
+    this.description = data.note.description
   }
 
-  submit(form: { value: { title: any; }; }) {
-    this.dialogRef.close(`${form.value.title}`);
+  ngOnInit(): void {
+  }
+
+  tokenId = localStorage.getItem("token");
+
+
+  submit=()=>{ 
+    let UpdateUserData = {
+      "title": this.title,
+      "description": this.description, 
+    }
+    this.noteService.updateNote(UpdateUserData,this.tokenId).subscribe((UpdateUserData) => {
+      console.log(" updated successfull", UpdateUserData);
+    })
   }
 }

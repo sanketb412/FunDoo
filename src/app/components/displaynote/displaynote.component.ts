@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, OnInit, Input} from '@angular/core';
+import { MatDialog  } from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 
 @Component({
@@ -11,23 +11,20 @@ export class DisplaynoteComponent implements OnInit {
 
   @Input() notes: any;
 
-  changeText: boolean;
+  updateData: any
 
-  updateDialogRef!: MatDialogRef<UpdatenoteComponent>;
+  changeText: boolean;
 
   constructor(private dialog: MatDialog) { 
     this.changeText = false;
   }
-
+ 
   ngOnInit(): void {
-    console.log(this.notes);
   }
-
-  openAddDialog() {
-    this.updateDialogRef = this.dialog.open(UpdatenoteComponent, {
-      hasBackdrop: false
-    });
+ 
+  openAddDialog(updateData: any) {
+    this.updateData = updateData
+    this.dialog.open(UpdatenoteComponent, {data : {note: updateData} });
+    // console.log(data)
   }
 }
-
-

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpServiceService } from '../httpService/http-service.service';
 import { environment } from '../../../environments/environment';
-import { HttpHeaders } from '@angular/common/http';
+// import { HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -29,4 +29,8 @@ export class UserServiceService {
     return this.httpService.post(`${this.url}user/reset-password`, data, true, token)
   }
   
+  loggedIn () {
+    return !!localStorage.getItem('token')
+  }
+
 }

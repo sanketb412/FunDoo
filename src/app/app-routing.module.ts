@@ -5,13 +5,14 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { ForgetEmailComponent } from './pages/forget-email/forget-email.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AuthenticationGuard } from './services/auth/auth.guard';
 
 const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent},
   { path: 'forget-email', component: ForgetEmailComponent },
   { path: 'resetpassword/:token', component: PasswordComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent, canActivate:[AuthenticationGuard]}
 ];
 
 @NgModule({

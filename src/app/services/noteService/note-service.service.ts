@@ -32,5 +32,7 @@ export class NoteServiceService {
     return this.httpService.get(`${this.url}notes/getNotesList`, true, token)
   }
 
-
+  updateNote = (userData: any, token: any) => {
+    return this.httpService.post(`${this.url}notes/updateNotes`, userData, true, token)
+  }
 }

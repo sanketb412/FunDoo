@@ -9,3 +9,7 @@
 .iconButton {
     justify-content: space-between;
 }
+
+::ng-deep .mat-dialog-container {
+    border-radius: 10px;
+}
