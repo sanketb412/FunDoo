@@ -28,6 +28,7 @@ import { DisplaynoteComponent } from './components/displaynote/displaynote.compo
 import { IconComponent } from './components/icon/icon.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
+import { ColorComponent } from './components/color/color.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     CreatenoteComponent,
     DisplaynoteComponent,
     IconComponent,
-    UpdatenoteComponent
+    UpdatenoteComponent,
+    ColorComponent
   ],
   imports: [
     BrowserModule,

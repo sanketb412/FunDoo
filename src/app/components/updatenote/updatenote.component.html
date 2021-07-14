@@ -1,18 +1,18 @@
-
-<form (ngSubmit)="submit()">
-    <div class="description" >
+<div class="description" >
+<form [formGroup]="form"(ngSubmit)="submit()">
+    
         <mat-dialog-content class="dialogContent">
-            <input formControlTitle="title" value="{{ title }}">
+            <input type="text" formControlName="title">
         </mat-dialog-content>
         <mat-dialog-content class="dialogContent">
-            <input formControlDescription="description" value="{{ description }}">
+            <input type="text" formControlName="description">
         </mat-dialog-content>
         <mat-dialog-actions class="iconButton">
             <app-icon></app-icon>
-            <button mat-button type="submit" mat-dialog-close>close</button>
+            <button mat-button type="submit" mat-dialog-close (click)="reloadCurrentPage()">close</button>
         </mat-dialog-actions>
-    </div>
+    
 </form>
-
+</div>
 
 <!-- (updateEvent)="noteUpdate=$event" -->
