@@ -1,6 +1,6 @@
 
 <mat-accordion>
-    <mat-expansion-panel hideToggle >
+    <mat-expansion-panel hideToggle  >
         <mat-expansion-panel-header>
             <form [formGroup]="form" (ngSubmit)="submit()" id="my-form"> 
                 <div style="width: 600px;">
@@ -28,9 +28,11 @@
                 <input class="searchInput" type="text" placeholder="Take a Notes.." formControlName="notesText">
             </div>
             <div style="display: flex; justify-content: space-between;" >
-                <app-icon style="width: 60%;"></app-icon>
+                <app-icon (transColor)="receiveIconColor($event)" style="width: 60%;"></app-icon>
                 <button mat-button type="submit" form="my-form">Close</button>
             </div>
         </form>
     </mat-expansion-panel>
 </mat-accordion>
+
+<!-- style="background-color: {{colorData}};"  -->

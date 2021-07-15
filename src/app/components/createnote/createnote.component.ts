@@ -30,5 +30,18 @@ export class CreatenoteComponent implements OnInit {
       console.log(userData)
     });
   }
+
+  colorData:string=''
+
+  receiveIconColor=($colorData:string) => {
+    this.colorData = $colorData;
+    console.log("create " + this.colorData)
+    let dataColor = {
+      "color": this.colorData
+    }
+    this.service.changeColor(dataColor, this.tokenId).subscribe((dataColor) => {
+      console.log("API " + dataColor)
+    })
+  }
   
 }

@@ -35,4 +35,8 @@ export class NoteServiceService {
   updateNote = (userData: any, token: any) => {
     return this.httpService.post(`${this.url}notes/updateNotes`, userData, true, token)
   }
+
+  changeColor = (dataColor: any, token: any) => {
+    return this.httpService.post(`${this.url}notes/changesColorNotes`, dataColor, true, token)
+  }
 }

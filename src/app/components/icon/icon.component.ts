@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-icon',
@@ -7,18 +7,21 @@ import { Component, OnInit} from '@angular/core';
 })
 export class IconComponent implements OnInit {
 
+  @Output() transColor:EventEmitter<string> = new EventEmitter<string>();
+
   isColor:string=''
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  
 
   receiveColorCode = ($isColor:string) =>{
     console.log("icon " + $isColor);
     this.isColor = $isColor;
-    // console.log("singleIcon " + this.isColor)
+    console.log("singleIcon " + this.isColor)
+    this.transColor.emit(this.isColor)
   }
-
 
 }
