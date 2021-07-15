@@ -8,6 +8,8 @@ import { Output, EventEmitter } from '@angular/core'
 })
 export class ColorComponent implements OnInit {
 
+  @Output() ItemEvent:EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,10 +17,12 @@ export class ColorComponent implements OnInit {
 
   colors=['#fff7e6','#FBBC04', '#f28b82','#fbbc04','#fff475','#ccff90','#a7ffeb','#cbf0f8','#aecbfa','#fdcfe8','#e6c9a8','#0080ff']
 
-  @Output() Colorevent = new EventEmitter<string>();
+  colorCode: any
 
-  getColor = (colorCode:string) => {
-    console.log("emit");
-    this.Colorevent.emit(colorCode);
+  passColor = (colorCode:string) => {
+    this.colorCode = colorCode
+    console.log({color: colorCode});
+    this.ItemEvent.emit(colorCode);
   }
 }
+

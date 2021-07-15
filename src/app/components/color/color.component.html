@@ -1,29 +1,6 @@
-<!-- <div class="body">
-    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(49, 90, 228);" (click)="colorChange()"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(223, 125, 125);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(218, 181, 133);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(176, 194, 112);"><img/></div>
-    </div>
-    <div style="display: flex; justify-content: space-around;">
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(165, 194, 112);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(135, 194, 112);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(112, 194, 156);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(112, 191, 194);"><img/></div>
-    </div>
-    <div style="display: flex; justify-content: space-around;">
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(112, 145, 194);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(112, 117, 194);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(161, 112, 194);"><img/></div>
-        <div mat-icon-button class="circle" style="border: solid 14px rgb(194, 112, 176);"><img/></div>
-    </div>
-</div> -->
 
-<!-- <button mat-icon-button type="button" [matMenuTriggerFor]="menu">
-    <mat-icon>palette </mat-icon>
-</button> -->
 <div class="color-icon">
       <div class="menuRow" *ngFor="let color of colors">
-        <div mat-menu-item class="color" [style.background-color]="color" (click)="getColor(color)"></div>
+        <div mat-menu-item class="color" [style.background-color]="color" (click)="passColor(color)"></div>
       </div>
 </div>

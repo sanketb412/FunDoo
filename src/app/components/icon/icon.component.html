@@ -6,13 +6,15 @@
     <button mat-icon-button>
         <mat-icon >perm_identity</mat-icon>
     </button>
+
     <button mat-icon-button [matMenuTriggerFor]="aboveMenu">
-        <mat-icon>color_lens</mat-icon>
+            <mat-icon>color_lens</mat-icon>
     </button>
         <mat-menu #aboveMenu="matMenu" yPosition="above">    
-            <app-color (ItemEvent)="getcolor($event)"></app-color>
+            <app-color (ItemEvent)="receiveColorCode($event)"></app-color>
         </mat-menu>
-    <button mat-icon-button>
+    
+        <button mat-icon-button>
         <mat-icon> insert_photo</mat-icon>
     </button>
     <button mat-icon-button>

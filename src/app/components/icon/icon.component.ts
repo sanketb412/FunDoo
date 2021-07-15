@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-icon',
@@ -14,9 +14,11 @@ export class IconComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  getColor($isColor:string) {
-    console.log($isColor);
+  receiveColorCode = ($isColor:string) =>{
+    console.log("icon " + $isColor);
     this.isColor = $isColor;
+    // console.log("singleIcon " + this.isColor)
   }
+
+
 }
