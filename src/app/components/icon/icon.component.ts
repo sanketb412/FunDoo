@@ -7,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconComponent implements OnInit {
 
+  isColor:string=''
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  display = false;
-  
-  onPress(){
-    this.display = true;
-  }
 
+  getColor($isColor:string) {
+    console.log($isColor);
+    this.isColor = $isColor;
+  }
 }
