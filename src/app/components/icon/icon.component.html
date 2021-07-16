@@ -1,26 +1,35 @@
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
+    <!-- Alert icon -->
     <button mat-icon-button>
         <mat-icon>add_alert</mat-icon>
     </button>
+    
+    <!-- person icon -->
     <button mat-icon-button>
         <mat-icon >perm_identity</mat-icon>
     </button>
 
+    <!-- color pallate icon -->
     <button mat-icon-button [matMenuTriggerFor]="aboveMenu">
             <mat-icon>color_lens</mat-icon>
     </button>
-        <mat-menu #aboveMenu="matMenu" yPosition="above">    
-            <app-color (ItemEvent)="receiveColorCode($event)"></app-color>
-        </mat-menu>
+    <!-- color menu -->
+    <mat-menu  #aboveMenu="matMenu" yPosition="above">    
+        <app-color (ItemEvent)="receiveColorCode($event)"></app-color>
+    </mat-menu>
     
-        <button mat-icon-button>
+    <!-- insert photo icon -->
+    <button mat-icon-button>
         <mat-icon> insert_photo</mat-icon>
     </button>
-    <button mat-icon-button>
+    
+    <!-- archive  icon -->
+    <button mat-icon-button (click)="archivePage()">
         <mat-icon>archive</mat-icon>
     </button>
 
+    <!-- more icon -->
     <button mat-icon-button [matMenuTriggerFor]="belowMenu">
         <mat-icon>more_vert</mat-icon>
     </button>
@@ -31,6 +40,5 @@
                 height: 5vh;">Delete</div>
             </button>
         </mat-menu>
-
 </div>
 

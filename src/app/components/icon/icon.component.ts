@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 
 @Component({
   selector: 'app-icon',
@@ -24,4 +24,10 @@ export class IconComponent implements OnInit {
     this.transColor.emit(this.isColor)
   }
 
+  archivePage() {
+    let noteData = {
+      // noteIdList: [props.noteId],       
+      isArchieved: true,
+    };
+  }
 }

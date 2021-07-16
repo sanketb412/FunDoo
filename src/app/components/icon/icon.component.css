@@ -1,7 +1,10 @@
+
+
 ::ng-deep .mat-menu-panel{
     height: 16vh !important;
     width: 20vh;
     min-width: 0px !important;
     min-height: 0px !important;
+    border-radius: 5px;
 }
 

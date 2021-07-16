@@ -4,6 +4,7 @@
 
 .dialogContent {
     height: 6vh;
+    width: 78vh;
 }
 
 .iconButton {
@@ -15,7 +16,12 @@
 }
 
 .inputBox {
-    line-height: 32px;
-    width: 50%;
-    border: solid rgb(212, 210, 210);
+    line-height: 40px;
+    width: 96%;
+    border: transparent;
+    padding: 0px 0px 0px 20px;
+}
+
+.formCSS{
+    margin: -24px;
 }

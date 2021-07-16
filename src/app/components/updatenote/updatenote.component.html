@@ -1,16 +1,17 @@
-<div class="description"  >
-    <form [formGroup]="form"(ngSubmit)="submit()">
-    
+
+<form class="formCSS" [formGroup]="form"(ngSubmit)="submit()">
+    <div class="description" [style.background-color] = "colorUpdate" >
         <mat-dialog-content class="dialogContent">
-            <input class="inputBox" matInput formControlName="title">
+            <input class="inputBox" matInput formControlName="title" [style.background-color] = "colorUpdate" >
         </mat-dialog-content>
         <mat-dialog-content class="dialogContent">
-            <input class="inputBox" type="text" formControlName="description">
+            <input class="inputBox" formControlName="description" [style.background-color] = "colorUpdate">
         </mat-dialog-content>
         <mat-dialog-actions class="iconButton">
-            <app-icon ></app-icon>
-            <button mat-button type="submit" mat-dialog-close (click)="reloadCurrentPage()">close</button>
+            <app-icon (transColor)="receiveIconColorUpdate($event)"></app-icon>
+            <button mat-button type="submit" mat-dialog-close >close</button>
         </mat-dialog-actions>
-    
-    </form>
-</div>
+    </div>
+</form>
+
+<!-- [style.background-color] = "colorUpdateData" -->

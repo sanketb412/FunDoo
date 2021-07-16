@@ -13,6 +13,8 @@ export class DisplaynoteComponent implements OnInit {
 
   updateData: any
 
+  colorData:string=''
+
   changeText: boolean;
 
   constructor(private dialog: MatDialog) { 
@@ -20,17 +22,17 @@ export class DisplaynoteComponent implements OnInit {
   }
  
   ngOnInit(): void {
+    // console.log(this.data.data.notes);  
   }
  
-  openAddDialog(updateData: any) {
-    this.updateData = updateData
-    this.dialog.open(UpdatenoteComponent, {data : {note: updateData} });
-  }
-
-  colorData:string=''
-
   receiveToUpdate=($colorData:string) => {
     this.colorData = $colorData;
     console.log("display " + this.colorData) 
   }
+  
+  openAddDialog(updateData: any) {
+    this.updateData = updateData
+    this.dialog.open(UpdatenoteComponent, {data : {note: updateData} });
+  }
+  
 }
