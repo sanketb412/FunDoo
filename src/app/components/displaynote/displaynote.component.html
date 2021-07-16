@@ -1,7 +1,7 @@
 <!-- <p>displaynote works!</p> -->
 <div class="displayBox" >
-    <ng-container  *ngFor="let note of notes" >
-        <div class="noteBlock" >
+    <ng-container  *ngFor="let note of notes"  >
+        <div  class="noteBlock" [style.background-color] = "note.color">
             <div (click)="openAddDialog(note)"  >
                 <div class="title">
                     <h2>{{ note.title }}</h2>
@@ -10,7 +10,7 @@
                     <h3>{{ note.description }}</h3>
                 </div>  
             </div>
-            <div class="icon" >
+            <div class="icon">
                 <app-icon (transColor)="receiveToUpdate($event)"></app-icon>
             </div> 
         </div>

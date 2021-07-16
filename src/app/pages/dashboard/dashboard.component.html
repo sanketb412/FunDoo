@@ -44,7 +44,7 @@
                 <button>
                     <mat-icon>note</mat-icon>
                 </button>
-                <button style="width: 35px; height: 35px;">Notes</button>
+                <button style="width: 35px; height: 35px;" (click) = "toggleDisplay()">Notes</button>
             </div>
             <div class="sideIcon" style="margin-bottom: 20px;">
                 <button>
@@ -62,7 +62,7 @@
                 <button>
                     <mat-icon>archive</mat-icon>
                 </button>
-                <button>Archieve</button>
+                <button (click) = "toggleDisplay()">Archieve</button>
             </div>
             <div class="sideIcon" style="margin-bottom: 20px;">
                 <button>
@@ -72,7 +72,8 @@
             </div>
         </mat-drawer> 
         <div style="background-color: rgb(255, 255, 255); width: 100%; height: 100%;">
-            <app-notes style="height: 30%;"></app-notes>
+            <app-notes *ngIf = "!isDisplay" style="height: 30%;"></app-notes>
+            <app-archive *ngIf = "isDisplay"></app-archive>
         </div>
     </mat-drawer-container> 
 </div>

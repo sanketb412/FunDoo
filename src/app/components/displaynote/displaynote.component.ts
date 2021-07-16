@@ -31,6 +31,6 @@ export class DisplaynoteComponent implements OnInit {
 
   receiveToUpdate=($colorData:string) => {
     this.colorData = $colorData;
-    console.log("display " + this.colorData)
+    console.log("display " + this.colorData) 
   }
 }

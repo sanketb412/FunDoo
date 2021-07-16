@@ -14,23 +14,12 @@ export class CreatenoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addColor: string =''
   
   form = new FormGroup({
     titleText: new FormControl(''),
     notesText: new FormControl('')
   })
-
-  tokenId = localStorage.getItem("token");
-
-  submit=() => {
-    let userData = {
-      "title": this.form.controls.titleText.value,
-      "description": this.form.controls.notesText.value
-    } 
-    this.service.createnote(userData, this.tokenId).subscribe((userData) => {
-      console.log(userData)
-    });
-  }
 
   colorData:string=''
 
@@ -38,12 +27,31 @@ export class CreatenoteComponent implements OnInit {
     this.colorData = $colorData;
     console.log("create " + this.colorData)
     
-    let dataColor = {
-      "color": this.colorData
-    }
-    this.service.changeColor(dataColor, this.tokenId).subscribe((dataColor) => {
-      console.log("API " + dataColor)
-    })
+    // let dataColor = {
+    //   "color": this.colorData
+    // }
+    // this.service.changeColor(dataColor, this.tokenId).subscribe((dataColor) => {
+    //   console.log("API " + dataColor)
+    // })
   }
+
+  tokenId = localStorage.getItem("token");
+
+  submit=() => {
+    let userData = {
+      "title": this.form.controls.titleText.value,
+      "description": this.form.controls.notesText.value,
+      "color": this.colorData
+    } 
+    this.service.createnote(userData, this.tokenId).subscribe((userData) => {
+      console.log(userData)
+      this.form.reset(); 
+    });
+  }
+
+  reloadCurrentPage() {
+    window.location.reload();
+  }
+  
   
 }

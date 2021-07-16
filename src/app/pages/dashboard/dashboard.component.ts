@@ -14,4 +14,9 @@ export class DashboardComponent implements OnInit {
 
   userName = localStorage.getItem("email");
 
+  isDisplay = false;
+
+  toggleDisplay(){
+    this.isDisplay = !this.isDisplay;
+  }
 }
