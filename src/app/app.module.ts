@@ -29,6 +29,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { ColorComponent } from './components/color/color.component';
 import { MatSelectModule } from '@angular/material/select';
+import { TrashComponent } from './components/trash/trash.component';
+import { ArchiveComponent } from './components/archive/archive.component';
 // import { ColorPickerModule } from '@syncfusion/ej2-angular-inputs';
 
 @NgModule({
@@ -44,7 +46,9 @@ import { MatSelectModule } from '@angular/material/select';
     DisplaynoteComponent,
     IconComponent,
     UpdatenoteComponent,
-    ColorComponent
+    ColorComponent,
+    TrashComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,

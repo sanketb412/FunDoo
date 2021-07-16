@@ -47,5 +47,7 @@ export class UpdatenoteComponent implements OnInit {
 
   reloadCurrentPage() {
     window.location.reload();
-   }
+  }
+
+  
 }

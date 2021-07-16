@@ -1,7 +1,7 @@
 <!-- <p>displaynote works!</p> -->
-<div class="displayBox">
-    <ng-container  *ngFor="let note of notes">
-        <div class="noteBlock">
+<div class="displayBox" >
+    <ng-container  *ngFor="let note of notes" >
+        <div class="noteBlock" >
             <div (click)="openAddDialog(note)"  >
                 <div class="title">
                     <h2>{{ note.title }}</h2>
@@ -11,7 +11,7 @@
                 </div>  
             </div>
             <div class="icon" >
-                <app-icon></app-icon>
+                <app-icon (transColor)="receiveToUpdate($event)"></app-icon>
             </div> 
         </div>
     </ng-container>
@@ -19,3 +19,5 @@
 
 <!-- style="position: relative; top:10px;" -->
 <!-- (click)="passToUpdate()" -->
+
+<!-- style="background: {{colorData}};" -->

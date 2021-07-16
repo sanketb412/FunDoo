@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpServiceService } from '../httpService/http-service.service';
 import { environment } from '../../../environments/environment';
-import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Observable, Subject } from 'rxjs';
 

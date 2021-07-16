@@ -25,6 +25,12 @@ export class DisplaynoteComponent implements OnInit {
   openAddDialog(updateData: any) {
     this.updateData = updateData
     this.dialog.open(UpdatenoteComponent, {data : {note: updateData} });
-    // console.log(data)
+  }
+
+  colorData:string=''
+
+  receiveToUpdate=($colorData:string) => {
+    this.colorData = $colorData;
+    console.log("display " + this.colorData)
   }
 }

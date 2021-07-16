@@ -1,12 +1,12 @@
 
 <mat-accordion>
-    <mat-expansion-panel hideToggle  >
+    <mat-expansion-panel hideToggle [style.background-color] = "colorData">
         <mat-expansion-panel-header>
             <form [formGroup]="form" (ngSubmit)="submit()" id="my-form"> 
                 <div style="width: 600px;">
                     <div style="display: flex; align-items: flex-end; justify-content: space-between;">
                         <div>
-                            <input class="searchInput" type="text" placeholder="Title" formControlName="titleText">
+                            <input [style.background-color] = "colorData" class="searchInput" type="text" placeholder="Title" formControlName="titleText">
                         </div>
                         <div id="myDIV" style="display: flex;">
                             <div>
@@ -25,7 +25,7 @@
         </mat-expansion-panel-header>
         <form [formGroup]="form">
             <div style="height: 70px;">
-                <input class="searchInput" type="text" placeholder="Take a Notes.." formControlName="notesText">
+                <input [style.background-color] = "colorData" class="searchInput" type="text" placeholder="Take a Notes.." formControlName="notesText">
             </div>
             <div style="display: flex; justify-content: space-between;" >
                 <app-icon (transColor)="receiveIconColor($event)" style="width: 60%;"></app-icon>

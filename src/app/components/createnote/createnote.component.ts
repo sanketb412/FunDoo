@@ -14,6 +14,7 @@ export class CreatenoteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
   form = new FormGroup({
     titleText: new FormControl(''),
     notesText: new FormControl('')
@@ -36,6 +37,7 @@ export class CreatenoteComponent implements OnInit {
   receiveIconColor=($colorData:string) => {
     this.colorData = $colorData;
     console.log("create " + this.colorData)
+    
     let dataColor = {
       "color": this.colorData
     }
