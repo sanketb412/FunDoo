@@ -8,9 +8,18 @@ import { NoteServiceService } from 'src/app/services/noteService/note-service.se
   styleUrls: ['./createnote.component.css']
 })
 export class CreatenoteComponent implements OnInit {
-
+  
   constructor(private service: NoteServiceService) { }
 
+  step = 0;
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++
+  }
   ngOnInit(): void {
   }
 
@@ -46,12 +55,9 @@ export class CreatenoteComponent implements OnInit {
     this.service.createnote(userData, this.tokenId).subscribe((userData) => {
       console.log(userData)
       this.form.reset(); 
+      this.colorData = '#ffff'
     });
+    
   }
 
-  reloadCurrentPage() {
-    window.location.reload();
-  }
-  
-  
 }

@@ -24,10 +24,10 @@ export class IconComponent implements OnInit {
     this.transColor.emit(this.isColor)
   }
 
-  archivePage() {
-    let noteData = {
-      // noteIdList: [props.noteId],       
-      isArchieved: true,
-    };
-  }
+  // archivePage() {
+  //   let noteData = {
+  //     // noteIdList: [props.noteId],       
+  //     isArchieved: true,
+  //   };
+  // }
 }

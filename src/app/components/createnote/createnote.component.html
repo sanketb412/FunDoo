@@ -1,23 +1,12 @@
 
 <mat-accordion>
-    <mat-expansion-panel hideToggle [style.background-color] = "colorData">
+    <mat-expansion-panel  [expanded]="step === 2" (opened)="setStep(2)" hideToggle [style.background-color] = "colorData">
         <mat-expansion-panel-header>
             <form [formGroup]="form" (ngSubmit)="submit()" id="my-form"> 
                 <div style="width: 600px;">
                     <div style="display: flex; align-items: flex-end; justify-content: space-between;">
                         <div>
                             <input [style.background-color] = "colorData" class="searchInput" type="text" placeholder="Title" formControlName="titleText">
-                        </div>
-                        <div id="myDIV" style="display: flex;">
-                            <div>
-                                <mat-icon>check_box</mat-icon>
-                            </div>
-                            <div>
-                                <mat-icon>brush</mat-icon>
-                            </div>
-                            <div>
-                                <mat-icon> insert_photo</mat-icon>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -27,10 +16,10 @@
             <div style="height: 70px;">
                 <input [style.background-color] = "colorData" class="searchInput" type="text" placeholder="Take a Notes.." formControlName="notesText">
             </div>
-            <div style="display: flex; justify-content: space-between;" >
+            <mat-action-row class="footer" style="display: flex; justify-content: space-between;" >
                 <app-icon (transColor)="receiveIconColor($event)" style="width: 60%;"></app-icon>
-                <button mat-button type="submit" form="my-form" >Close</button>
-            </div>
+                <button mat-button type="submit" form="my-form" (click)="nextStep()" >Close</button>
+            </mat-action-row>
         </form>
     </mat-expansion-panel>
 </mat-accordion>
