@@ -1,14 +1,19 @@
 .description {
     width: 600px;
+    background-color: colorUpdateData;
 }
 
 .dialogContent {
     height: 6vh;
     width: 78vh;
+    margin: 0;
+    padding: 3px 3px;
 }
 
 .iconButton {
     justify-content: space-between;
+    padding: 8px 10px;
+
 }
 
 ::ng-deep .mat-dialog-container {

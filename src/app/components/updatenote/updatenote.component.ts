@@ -35,11 +35,19 @@ export class UpdatenoteComponent implements OnInit {
 
   tokenId = localStorage.getItem("token");
 
-  colorUpdateData:string=''
+  // colorUpdate:string=''
 
   receiveIconColorUpdate=($colorData:string) => {
-    this.colorUpdateData = $colorData;
-    console.log("update " + this.colorUpdateData)
+    this.colorUpdate = $colorData;
+    console.log("update " + this.colorUpdate)
+
+    let data={
+      color: this.colorUpdate,
+      noteIdList:[this.id]
+    }
+    this.noteService.changeColor(data,this.tokenId).subscribe((data) => {
+      console.log("color changed ", data);
+    })
   }
 
   submit=()=>{ 
@@ -47,15 +55,16 @@ export class UpdatenoteComponent implements OnInit {
       "noteId": this.id,
       "title": this.form.controls.title.value,
       "description": this.form.controls.description.value,  
-      "color": this.colorUpdateData
+      "color": this.colorUpdate
     }
     console.log(UpdateUserData)
     this.noteService.updateNote(UpdateUserData,this.tokenId).subscribe((UpdateUserData) => {
-    console.log(" updated successfull", UpdateUserData);
+    console.log("updated successfull", UpdateUserData); 
     })
   }
 
   reloadCurrentPage() {
     window.location.reload();
   }
+  
 }
