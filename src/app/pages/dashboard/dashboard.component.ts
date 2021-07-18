@@ -16,7 +16,19 @@ export class DashboardComponent implements OnInit {
 
   isDisplay = false;
 
-  toggleDisplay(){
-    this.isDisplay = !this.isDisplay;
+
+  switchClick = 1
+
+  noteDisplay(){
+    return this.switchClick = 1;
   }
+
+  archieveDisplay(){
+    return this.switchClick = 2;
+  }
+
+  trashDisplay(){
+    return this.switchClick = 3;
+  }
+
 }
