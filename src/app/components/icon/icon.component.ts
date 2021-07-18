@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
+import { NoteServiceService } from 'src/app/services/noteService/note-service.service';
 
 @Component({
   selector: 'app-icon',
@@ -9,9 +10,13 @@ export class IconComponent implements OnInit {
 
   @Output() transColor:EventEmitter<string> = new EventEmitter<string>();
 
-  isColor:string=''
+  @Input() noteId:any;
 
-  constructor() { }
+  isColor:string=''
+  
+  constructor(private noteService: NoteServiceService) { }
+
+  token_Id = localStorage.getItem('token');
 
   ngOnInit(): void {
   }
@@ -24,10 +29,26 @@ export class IconComponent implements OnInit {
     this.transColor.emit(this.isColor)
   }
 
-  // archivePage() {
-  //   let noteData = {
-  //     // noteIdList: [props.noteId],       
-  //     isArchieved: true,
-  //   };
-  // }
+  archivePage() {
+    console.log(this.noteId)
+    let data = {
+      noteIdList:[this.noteId],   
+      isArchieved: true    
+    }
+    console.log(data);
+    this.noteService.archiveData(data, this.token_Id).subscribe((response:any)=>{
+      console.log("Archieve Successfully");
+    });
+  }
+
+  deleteNote(){
+    console.log(this.noteId);
+    let data = {
+      noteIdList:[this.noteId],
+      isDeleted:true
+    }
+    this.noteService.deleteNotes(data, this.token_Id).subscribe((response:any)=>{
+      console.log("Deleted Successfully");
+    });
+  }
 }

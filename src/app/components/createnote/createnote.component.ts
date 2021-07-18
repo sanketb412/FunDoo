@@ -36,12 +36,12 @@ export class CreatenoteComponent implements OnInit {
     this.colorData = $colorData;
     console.log("create " + this.colorData)
     
-    // let dataColor = {
-    //   "color": this.colorData
-    // }
-    // this.service.changeColor(dataColor, this.tokenId).subscribe((dataColor) => {
-    //   console.log("API " + dataColor)
-    // })
+    let dataColor = {
+      "color": this.colorData
+    }
+    this.service.changeColor(dataColor, this.tokenId).subscribe((dataColor) => {
+      console.log("API " + dataColor)
+    })
   }
 
   tokenId = localStorage.getItem("token");

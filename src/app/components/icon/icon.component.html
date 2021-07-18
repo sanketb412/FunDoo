@@ -26,7 +26,7 @@
     
     <!-- archive  icon -->
     <button mat-icon-button (click)="archivePage()">
-        <mat-icon>archive</mat-icon>
+        <mat-icon >archive</mat-icon>
     </button>
 
     <!-- more icon -->
@@ -34,7 +34,7 @@
         <mat-icon>more_vert</mat-icon>
     </button>
         <mat-menu #belowMenu="matMenu" yPosition="below">    
-            <button>Delete</button>
+            <button (click) = "deleteNote()">Delete</button>
         </mat-menu>
 </div>
 

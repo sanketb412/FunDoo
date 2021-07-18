@@ -38,4 +38,26 @@ export class NoteServiceService {
   changeColor = (dataColor: any, token: any) => {
     return this.httpService.post(`${this.url}notes/changesColorNotes`, dataColor, true, token)
   }
+
+  archiveData = (userData : any, token: any) => {
+    return this.httpService.post(`${this.url}notes/archiveNotes`, userData, true, token)
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
+    );
+  }
+
+  deleteNotes = (userData: any, token: any) => {
+    return this.httpService.post(`${this.url}notes/trashNotes`, userData, true, token)
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
+    );
+  }
+
+  getTrashNotes = (token: any) => {
+    return this.httpService.get(`${this.url}notes/getTrashNotesList`, true, token)
+  }
 }
