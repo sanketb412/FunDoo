@@ -9,6 +9,7 @@ import { NoteServiceService } from 'src/app/services/noteService/note-service.se
 export class NotesComponent implements OnInit {
 
   notes = []; 
+  static color: string;
   
   constructor(private service: NoteServiceService) { }
 

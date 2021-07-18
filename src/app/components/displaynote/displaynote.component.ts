@@ -10,7 +10,6 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 export class DisplaynoteComponent implements OnInit {
 
   @Input() notes: any;
-  
 
   updateData: any
 
