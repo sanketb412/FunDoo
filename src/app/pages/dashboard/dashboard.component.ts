@@ -14,9 +14,6 @@ export class DashboardComponent implements OnInit {
 
   userName = localStorage.getItem("email");
 
-  isDisplay = false;
-
-
   switchClick = 1
 
   noteDisplay(){

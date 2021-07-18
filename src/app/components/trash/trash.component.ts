@@ -29,8 +29,6 @@ export class TrashComponent implements OnInit {
       this.notes=this.trashNote.filter((note:any)=>{
        return note.isDeleted==true
        })  
-       console.log(this.notes);
     })
-    
   }
 }

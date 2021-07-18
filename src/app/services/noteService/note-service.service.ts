@@ -48,6 +48,11 @@ export class NoteServiceService {
     );
   }
 
+  getArchieveNotes = (token: any) => {
+    return this.httpService.get(`${this.url}notes/getArchiveNotesList`, true, token)
+  }
+
+
   deleteNotes = (userData: any, token: any) => {
     return this.httpService.post(`${this.url}notes/trashNotes`, userData, true, token)
     .pipe(

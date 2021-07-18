@@ -33,11 +33,11 @@ export class IconComponent implements OnInit {
     console.log(this.noteId)
     let data = {
       noteIdList:[this.noteId],   
-      isArchieved: true    
+      isArchieved:true    
     }
     console.log(data);
-    this.noteService.archiveData(data, this.token_Id).subscribe((response:any)=>{
-      console.log("Archieve Successfully");
+    this.noteService.archiveData(data, this.token_Id).subscribe((data)=>{
+      console.log("Archieve Successfully", data);
     });
   }
 
@@ -47,8 +47,8 @@ export class IconComponent implements OnInit {
       noteIdList:[this.noteId],
       isDeleted:true
     }
-    this.noteService.deleteNotes(data, this.token_Id).subscribe((response:any)=>{
-      console.log("Deleted Successfully");
+    this.noteService.deleteNotes(data, this.token_Id).subscribe((data)=>{
+      console.log("Deleted Successfully", data);
     });
   }
 }
