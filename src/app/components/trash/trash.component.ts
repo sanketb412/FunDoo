@@ -10,8 +10,6 @@ export class TrashComponent implements OnInit {
 
   trashNote:any=[];
   notes:any=[];
-  note=[];
-  AllNotes=[];
   
   token_Id = localStorage.getItem('token');
 
@@ -24,7 +22,6 @@ export class TrashComponent implements OnInit {
 
   getAllTrash(){
     this.trashNote=this.noteService.getTrashNotes( this.token_Id).subscribe((data:any)=>{
-      console.log(data['data'].data);
       this.trashNote=data['data'].data.reverse()
       this.notes=this.trashNote.filter((note:any)=>{
        return note.isDeleted==true

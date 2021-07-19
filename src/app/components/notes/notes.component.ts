@@ -23,6 +23,7 @@ export class NotesComponent implements OnInit {
   getData() {
     this.service.note(this.tokenId).subscribe((data:any) => {
       this.notes=data['data'].data.reverse()
+      
     })
   }
   

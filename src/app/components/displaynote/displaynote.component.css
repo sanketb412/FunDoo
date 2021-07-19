@@ -24,11 +24,11 @@
 }
 
 .icon {
-    height: 42px;
+    height: 17px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    display: none;
+    visibility: hidden;
 }
 
 .displayBox {
@@ -38,5 +38,5 @@
 }
 
 .noteBlock:hover .icon {
-    display: block;
+    visibility: visible;
 } 
