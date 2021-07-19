@@ -10,6 +10,7 @@ export class NotesComponent implements OnInit {
 
   notes = []; 
   static color: string;
+  trashNote:any=[];
   
   constructor(private service: NoteServiceService) { }
 
@@ -22,8 +23,10 @@ export class NotesComponent implements OnInit {
 
   getData() {
     this.service.note(this.tokenId).subscribe((data:any) => {
+      this.notes=this.trashNote.filter((note:any)=>{
+       return note.isDeleted==false
+      })
       this.notes=data['data'].data.reverse()
-      
     })
   }
   

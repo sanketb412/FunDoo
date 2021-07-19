@@ -33,6 +33,11 @@ export class NoteServiceService {
 
   updateNote = (userData: any, token: any) => {
     return this.httpService.post(`${this.url}notes/updateNotes`, userData, true, token)
+    .pipe(
+      tap(() => {
+        this.refresh.next();
+      })
+    );
   }
 
   changeColor = (dataColor: any, token: any) => {

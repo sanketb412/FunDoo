@@ -23,9 +23,9 @@ export class ArchiveComponent implements OnInit {
   getAllArchieve(){
     this.archieveNote=this.noteService.getArchieveNotes( this.token_Id).subscribe((data:any)=>{
       this.archieveNote=data['data'].data.reverse()
-      this.notes=this.archieveNote.filter((note:any)=>{
-       return note.isArchieved==false
-       })  
+      // this.notes=this.archieveNote.filter((note:any)=>{
+      //  return note.isArchieved==false
+      //  })  
     })
   }
 
