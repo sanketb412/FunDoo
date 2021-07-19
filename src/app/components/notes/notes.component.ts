@@ -23,10 +23,11 @@ export class NotesComponent implements OnInit {
 
   getData() {
     this.service.note(this.tokenId).subscribe((data:any) => {
-      this.notes=this.trashNote.filter((note:any)=>{
+      this.notes=data['data'].data.reverse()
+      this.notes=this.notes.filter((note:any)=>{
        return note.isDeleted==false
       })
-      this.notes=data['data'].data.reverse()
+      
     })
   }
   

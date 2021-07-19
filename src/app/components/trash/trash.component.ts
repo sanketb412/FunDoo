@@ -22,10 +22,7 @@ export class TrashComponent implements OnInit {
 
   getAllTrash(){
     this.trashNote=this.noteService.getTrashNotes( this.token_Id).subscribe((data:any)=>{
-      this.notes=data['data'].data.reverse()
-      // this.notes=this.trashNote.filter((note:any)=>{
-      //  return note.isDeleted==true
-      //  })  
+      this.notes=data['data'].data 
     })
   }
 }
