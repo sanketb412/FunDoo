@@ -44,7 +44,7 @@ export class NoteServiceService {
     return this.httpService.post(`${this.url}notes/changesColorNotes`, dataColor, true, token)
   }
 
-  archiveData = (userData : any, token: any) => {
+  archivedNotes = (userData : any, token: any) => {
     return this.httpService.post(`${this.url}notes/archiveNotes`, userData, true, token)
     .pipe(
       tap(() => {

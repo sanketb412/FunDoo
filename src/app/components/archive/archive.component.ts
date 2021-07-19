@@ -10,25 +10,20 @@ export class ArchiveComponent implements OnInit {
 
   archieveNote:any=[];
   notes:any=[];
-  note=[];
-  AllNotes=[];
 
   token_Id = localStorage.getItem('token');
 
   constructor(private noteService: NoteServiceService ) { }
 
   ngOnInit(): void {
-    this.getAllArchieve();
-    this.noteService.getRefreshedData().subscribe(() => this.getAllArchieve());
+    this.getArchieve();
+    this.noteService.getRefreshedData().subscribe(() => this.getArchieve());
   }
 
-  getAllArchieve(){
-    this.archieveNote=this.noteService.getArchieveNotes( this.token_Id).subscribe((data:any)=>{
-      console.log(data['data'].data);
-      this.archieveNote=data['data'].data.reverse()
-      this.notes=this.archieveNote.filter((note:any)=>{
-       return note.isArchieved==false
-       })  
+  getArchieve(){
+    console.log("getting archive")
+    this.archieveNote=this.noteService.getArchieveNotes(this.token_Id).subscribe((data:any)=>{
+      this.notes=data['data'].data 
     })
   }
 

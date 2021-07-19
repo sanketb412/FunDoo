@@ -26,7 +26,11 @@ export class NotesComponent implements OnInit {
       this.notes=data['data'].data.reverse()
       this.notes=this.notes.filter((note:any)=>{
        return note.isDeleted==false
-      })
+      });
+
+      this.notes=this.notes.filter((note:any)=>{
+        return note.isArchived==false
+      });
       
     })
   }

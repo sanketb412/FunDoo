@@ -31,13 +31,13 @@ export class IconComponent implements OnInit {
 
   archivePage() {
     console.log(this.noteId)
-    let data = {
+    let dataArchive = {
       noteIdList:[this.noteId],   
-      isArchieved:true    
+      "isArchived": true    
     }
-    console.log(data);
-    this.noteService.archiveData(data, this.token_Id).subscribe((data)=>{
-      console.log("Archieve Successfully", data);
+    console.log("note and boolean ", dataArchive);
+    this.noteService.archivedNotes(dataArchive, this.token_Id).subscribe((dataArchive)=>{
+      console.log("Archieve Successfully", dataArchive);
     });
   }
 
